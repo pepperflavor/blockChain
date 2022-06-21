@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+
+}
+/* 배경 */
+.container{
+    position: relative;
+    background-repeat: no-repeat;
+    background-image: url(img/상담제출후.jpg);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* background-image: url("img/연어점프.jpg"); */
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logo{
+    width: 130px;
+    height: 70px;
+    background-color: aliceblue;
+    border-radius: 10%;
+    opacity: 70%;
+
+}
+
+
+/* 문구들 */
+.mainTxt{
+    position: relative;
+    color: aliceblue;
+    font-family: 'top_menu';
+    font-size: 3.5em;
+    font-weight: 400;
+    width: 800px;
+    height: 300px;
+}
+
+@font-face {
+    font-family: 'top_menu';
+    src: url("font/SB\ 어그로\ M.ttf");
+}
+
+.mainTxt:hover{
+    animation-name: thanks;
+    animation-duration: 7s;
+    /* 애니매이션효과 몇번 반복할지 */
+    animation-iteration-count: infinite; 
+    transition: 1s;
+}
+@keyframes thanks{
+    0%{
+        color: rgb(255, 255, 255);
+    }
+    20%{
+        color: rgb(22, 171, 190);
+    }
+    40%{
+        color: rgba(199, 155, 13, 0.479);
+    }
+    60%{
+        color: rgba(204, 21, 21, 0.527);
+    }
+    80%{
+        color: rgba(18, 243, 10, 0.479);
+    }
+    100%{color: rgba(204, 10, 243, 0.479);}
+
+}
+
+.goHome{
+    border-radius: 5%;
+    border-color: none;
+    border-bottom-right-radius: 40%;
+    width: 130px;
+    height: 50px;
+    background-color: black;
+    color: antiquewhite;
+    font-family: 'waek';
+   
+    box-shadow: 3px 3px 3px 3px rgb(13, 53, 161);
+
+}
+@font-face {
+    font-family: 'waek';
+    src: url("font/SB\ 어그로\ L.ttf");
+}

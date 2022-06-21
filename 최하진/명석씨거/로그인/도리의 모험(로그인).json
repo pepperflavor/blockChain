@@ -1,0 +1,45 @@
+{
+    "player" : {
+
+        "user0" : {
+            "id" : "dori",
+            "name" : "도리",
+            "password" : 454648,
+            "level" : 1,
+            "ap" : 5,
+            "dp" : 5,
+            "hp" : 100,
+            "speed" : 5
+        },
+
+        "user1" : {
+            "id" : "jini",
+            "name" : "지니",
+            "password" : 82825,
+            "ap" : 5,
+            "dp" : 5,
+            "hp" : 100,
+            "speed" : 5
+        },
+
+        "user2" : {
+            "id" : "hajin",
+            "name" : "하진",
+            "password" : 12345,
+            "ap" : 5,
+            "dp" : 5,
+            "hp" : 100,
+            "speed" : 5
+        },
+
+        "user3" : {
+            "id" : "yunmi",
+            "name" : "윤미",
+            "password" : 75756,
+            "ap" : 5,
+            "dp" : 5,
+            "hp" : 100,
+            "speed" : 5
+        }
+    }
+}

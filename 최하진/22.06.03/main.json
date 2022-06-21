@@ -1,0 +1,28 @@
+{
+    "player": {
+        "user": {
+            "id": "윤철이",
+            "name": "이지니",
+            "password": "1234",
+            "Lv": "2"
+        },
+        "user2": {
+            "id": "후추",
+            "name": "최하진",
+            "password": "a1111",
+            "Lv": "19"
+        },
+        "user3": {
+            "id": "거상만함",
+            "name": "명석",
+            "password": "aaaa",
+            "Lv": "10"
+        },
+        "user4": {
+            "id": "얼죽아",
+            "name": "김승훈",
+            "password": "1222",
+            "Lv": "12"
+        }
+    }
+}

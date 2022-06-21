@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프론트엔드 개발자 지원서</title>
+
+    <style>
+        body {
+            /* vw : view width의 약자 웹페이지 전체를 기준으로 길이를 재단해줌
+                vh : view width */
+            width: 100vw;
+            height: 100vh;
+        }
+
+        form {
+            /* 두개 첫번째- 위아래 /좌우 */
+            /* margin: auto auto; */
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+
+
+            /*  */
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <fieldset style="width: 50%;">
+            <blockquote>
+                <h1>개발자 지원서</h1>
+
+                <p>사람이면 지원하세요..</p>
+                <hr>
+                <legend><b>개인정보</b></legend>
+                <blockquote>
+                    <p><b>이름 <input type="text" placeholder="공백없이 입력하세요" /></b></p>
+                </blockquote>
+                <blockquote>
+                    <p><b>연락처 <input type="number" /></b></p>
+                </blockquote>
+                <br>
+                <legend><b>지원 분야</b></legend>
+                <br>
+                <blockquote><input type="radio" value="pick" />프론트개발자 <br>
+                    <input type="radio" value="pick" />백엔드 개발자 개발<br>
+                    <input type="radio" value="pick" />청소부<br>
+                </blockquote>
+                <br>
+                <legend><b>지원동기</b></legend>
+                <br>
+                <textarea id="memo" cols="70" rows="8" placeholder="본사 지원동기를 간략히 써 주세요"></textarea>
+                <br>
+                <button type="submit">접수하기</button>
+                <button type="reset">다시쓰기</button>
+            </blockquote>
+
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

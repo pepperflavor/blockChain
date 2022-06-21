@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // ex) [1, 2, 3, 4, 5] == 9 return 하는 인덱스는 3, 4 배열 arr가 있고 어떤수 weight가 주어졌을 때
+        // 합쳐서 weight가 되는 배열내 두개의 인덱스를 반환하라 만약 합쳐서 weight가 되는 항목 두가지가 존재하지 않을경우
+        // -1 return
+
+        // function findSum(arr, weight) {
+        //     for (let i = 0; i < arr.lenght; i++) {
+        //         for (let k = 0; k < arr.lenght; k++) {
+        //             if (arr[i] + arr[k] == weight) {
+        //                 console.log(i);
+        //                 console.log(k);
+        //             } else { }
+        //         }
+        //     }
+        //     // console.log(-1) ;
+        // }
+
+        // const arr = [1, 2, 3, 4, 5];
+        // const test = findSum(arr, 9);
+        // console.log(test);
+
+        // // 교슈님 코드 
+        // function findSum(arr, weight) {
+        //     for (let i = 0; i < arr.lenght; i++) {
+        //         for (let k = 0; k < arr.lenght; k++) {
+        //             if ((arr[i] + arr[k]) == weight) {
+        //                 return [i, k];
+        //             } else {
+        //                 return -1;
+        //             }
+        //         }
+        //     }
+        // }
+
+        //1, 2, 3 4, 5, 6, 7, 8, 9
+        // const arr1 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+        // function Matrix(row, col) {
+        //     let jaggedArr = new Array(row);
+        //     for (let i = 0; i < col; i += 1) {
+        //         jaggedArr[i] = new Array(row);
+        //     }
+        //     return jaggedArr;
+        // }
+        // console.log(Matrix(3, 3));
+
+        /*       백준 & 기업 코테문제
+    input이
+    [1,0,1],
+    [0,0,1],
+    [1,1,1],
+
+    output
+    [1,1,1],
+    [0,0,1],
+    [1,0,1].
+
+    //행렬을 왼쪽으로 90도 회전(반시계 방향으로)
+    1. 행렬의 세번째 열이 회전된 행렬의 첫번째 행이 된다.
+    2. 행렬의 두번째 열이 회전된 행렬의 두번째 행이 된다.
+    3. 헹렬의 첫번째 열이 회전된 행렬의 세번째 행이 된다.
+*/
+
+
+
+        /*
+sort
+버블정렬
+가장 간단하지만 전체 배열을 순회하면서 이전 항목이 다음 항목보다 큰 경우 두 항목을 교환한다.
+한번에 하나씩 위치를 바꾸기 때문에 엄청 오래걸림
+// */
+        function random(n) {
+            let arr = new Array();
+            let num;
+            let temp;
+
+            for (let i = 0; i <= n; i++) {
+                arr.push(i);
+            }
+            for (let k = 0; k < arr.length; k++) {
+                num = Math.floor(Math.random() * n);
+                temp = arr[i];
+                arr[i] = arr[num];
+                arr[num] = temp;
+            }
+            return arr;
+        }
+
+        function bubbleSort(array) {
+            const arrlen = array.lenght;
+            for (let i = 0; i < array.lenght; i++) {
+                for (let k = 0; k < array - 1 - i; k++) {
+                    if (array[k] > array[k + 1]) { //현재 인덱스의 값이 다음인덱스보다 크다면 스왑
+
+                        let temp = array[k];
+                        array[k] = array[k + 1];
+                        array[k + 1] = temp;
+                    }
+                }
+            }
+            return array;
+        }
+
+        let bubbleSorting = random(10);
+        console.log("버블 정렬 전 : ", bubbleSorting);
+        let startTime = new Date().getTime() / 1000;
+        console.log("버블 정렬 후 : ", bubbleSort(bubbleSorting));
+        let endTime = new Date().getTime() / 1000; //시간 구하기
+        console.log(`정렬소요 시간 : ${endTime - startTime}`);
+        
+    </script>
+</body>
+
+</html>

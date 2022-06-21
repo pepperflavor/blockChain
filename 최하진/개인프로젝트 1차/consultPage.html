@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="consultPage.css" />
+    <link rel="stylesheet" href="reset.css" />
+
+    <title>상담신청</title>
+  </head>
+  <body>
+    <div class="boxBorder">
+      <div class="top">
+        <div>
+          <a href="wallpepper7.html">
+            <img
+              class="logo"
+              src="img/아이하진_고화질-removebg-preview.png"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="exite">
+          <a href="wallpepper7.html"
+            ><img
+              class="exite"
+              src="img/close.png"
+              onclick="location.href=wallpepper7.html"
+              alt=""
+          /></a>
+        </div>
+      </div>
+      <div class="section2">
+        <form name="my_form" style="margin: 0" action="GobackHome_ver2.html">
+          <div class="consult_info">
+            <h1 class="mainTxt">Want to work with US?</h1>
+            <div class="contact_us">
+              <div></div>
+            </div>
+            <div class="consult_box">
+              <div class="tittle">
+                <h4>빠른 상담신청</h4>
+                <p>
+                  &nbsp; 문의를 남겨주시면 내용 검토 후 내방 예약 또는 상담전화
+                  드리겠습니다
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="input_Box">
+            <p class="innerP">이&nbsp;&nbsp;름</p>
+            <input class="box" type="text" name="g_name" />
+
+            <p class="innerP">연락처</p>
+            <input class="box" type="text" name="tel" />
+
+            <p class="innerP">이메일</p>
+            <input class="box" type="text" name="e_mail" />
+
+            <p class="innerP">신청 클래스</p>
+            <input class="box" type="text" name="class" />
+            <div class="subBox">
+              <input class="checkBox" type="checkbox" class="innerP" />
+              <p class="checkBoxTxt">개인정보 취급방침에 동의합니다.</p>
+              <input
+                class="checkBtn"
+                type="submit"
+                id="subBtn"
+                value="제출하기"
+              />
+            </div>
+          </div>
+          <!-- 지도 API 시작 -->
+          <!-- <br /> <span class="input_txt"> 이름 </span><input type="text" /> <span
+                    class="input_txt"> 연락처 </span><input type="text" /> <br /> <br /> <span
+                    class="input_txt"> e-mail </span><input type="text" /> -->
+        </form>
+        <div class="kakakoMap">
+          <h1 class="mapTittle">찾아오시는 길</h1>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+    <!-- 입력양식 끝 -->
+  </body>
+  <script
+    type="text/javascript"
+    src="//dapi.kakao.com/v2/maps/sdk.js?appkey=00ca6253edeea2b8097dcc708d4c14de"
+  ></script>
+
+  <script src="kakaoMap.js"></script>
+</html>

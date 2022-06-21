@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>main1</title>
+  </head>
+  <body>
+    <div class="box"></div>
+    <form>
+      <input type="text" name="wish" value="하고싶은 일 " />
+      <br />
+      <input type="text" name="name" value="이름 " />
+      <br />
+      <div id="print22"></div>
+      <div id="switchBtn"></div>
+      <!-- form 안에서 button으로 정보를 넘겨주려면 type = "button" 을 써줘야한다. 안그러면 버튼 누르면 새로고침이 되어버림-->
+      <!-- 이럴때 방법이 버튼태그를 form밖으로 빼거나 type을 넣어주면된다. -->
+      <button type="button" onclick="print()">출력하기</button>
+      <button type="button" onclick="change()">위치 바꾸기</button>
+    </form>
+  </body>
+  <!-- <script src="main.js"></script> -->
+  <script src="실습_ver2.js"></script>
+</html>
+
+<!-- 정규식을 변수로 사용하려면
+let reg = new RegExp(내용,"g") 또는
+text = text.replace(new RegExp(내용,"g"), 플래그) 이렇게 동적할당하면된다.-->

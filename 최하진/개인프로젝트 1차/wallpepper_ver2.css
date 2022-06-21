@@ -1,0 +1,314 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* overflow: hidden; */
+    /* width: 1690.670px;
+    height: 3454.670px; */
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: auto;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* background-image: url("img/연어점프.jpg"); */
+    background-size: cover;
+    transition: 2s;
+    z-index: -1;
+}
+
+.logo {
+
+    margin-top: 50px;
+    margin-left: 30px;
+    position: fixed;
+}
+
+.top_bar {
+    overflow: visible;
+    /* display: flex; */
+}
+
+.nav_bar {
+    width: 100%;
+    display: flex;
+    margin-left: 20%;
+    margin-right: 10%;
+    position: absolute;
+    /* overflow-wrap: break-word; */
+
+}
+
+.menu_txt {
+    list-style: none;
+    margin: 3vw 5vw 5vw 2vw;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 900;
+    color: rgb(236, 225, 204);
+    font-family: 'top_menu';
+
+}           
+@font-face {
+    font-family: 'top_menu';
+    src: url("font/SB\ 어그로\ M.ttf");
+}
+
+.menu_txt22 {
+    text-decoration: none;
+    color: rgb(236, 225, 204);
+}
+
+.bbar {
+    height: 270px;
+    width: 100%;
+    /* background-color: rgba(204, 198, 198, 30%);  */
+    z-index: 1;
+    position: relative;
+}
+
+.water_efect {
+    width: 100vw;
+    height: 100vh;
+    background-image: none;
+}
+
+#textcontet {
+    /* transform: translateX(-100px); */
+    transition: all 0.5s ease-in-out;
+}
+
+.active {
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.deactive {
+    transform: translateX(-100px);
+    opacity: 0;
+}
+
+.scroll::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px;
+    animation: ball 2s linear infinite;
+}
+.btn_portfolio{
+    width: 150px;
+    height: 150px;
+}
+
+.consult {
+    color: #fff;
+    font-family: waek;
+    font-weight: 100 !important;
+    width: 120px;
+    height: 120px;
+    margin-top: 2vh;
+    margin-left: 2vw;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.consultBtn{
+    width: 120px;
+    height: 120px;
+}
+
+
+
+.consult:hover {
+    transform: scale(1.2);
+}
+
+.consult::after {
+    content: '';
+    width: 120px;
+    height: 120px;
+    display: flex;
+    background-image: url("img/새상담버튼-removebg-preview.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.ABC{
+    width: 120px !important;
+
+}
+
+
+/* 화면 메인 문구 */
+.slide_con {
+    margin-left: 80px;
+    opacity: 1;
+    transition: 0.75s;
+    font-weight: 900;
+    font-family: 'strong';
+}
+@font-face {
+    font-family: 'strong';
+    src: url("font/SB\ 어그로\ B.ttf");
+}
+.main_text {
+    color: #fff;
+    font-size: 4em;
+    font-weight: 900;
+}
+.main_subText {
+    color: #fff;
+    font-size: 1.5em;
+    font-family: 'waek' !important;
+}
+@font-face {
+    font-family: 'waek';
+    src: url("font/SB\ 어그로\ L.ttf");
+}
+/* 텍스트 강조부분 */
+.hi {
+    color: rgb(220, 20, 30) !important;
+}
+.hello {
+    color: rgb(12, 16, 211) !important;
+}
+
+/* 상담카드 설정 */
+/* .con_card{
+    font-family: 'waek';
+    color: #fff;
+} */
+
+#bar_text {
+    display: flex;
+    /* flex-direction: flex-end; */
+    position: absolute;
+    top: 50%;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: space-between;
+    align-content: center;
+    justify-content: flex-end;
+
+}
+
+#myname {
+    height: 100px;
+    width: 230px;
+    border-radius: 10%;
+    position: fixed;
+}
+
+#myContainer {
+    height: 100%;
+    position: relative;
+    touch-action: none;
+    transform: translate3d(0px, 0px, 0px);
+    transition: all 1000ms ease 0s;
+    text-align: left;
+    margin-left: 4vw;
+    margin-top: 8vh;
+}
+
+/*  회사정보 카드 */
+.sideCard{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+}
+.card {
+    display: none;
+    /* text-align: center ; */
+    align-items: center ; 
+    width: 356.203px;
+    height: 182px;
+    background-color: black;
+    opacity: 80%;
+    border-radius: 8%;
+    float: right;
+    right: -1px;
+    z-index: 9999;
+    cursor: pointer;
+    background-size: contain;
+    margin-right: 30px;
+}
+
+.card_box {
+    justify-content: center;
+    flex-direction: row;
+    font-family: 'waek';
+    color: #fff;
+    font-size: 15px;
+    text-align: center center;
+    align-items: center center;
+    
+}
+.card_logo {
+    
+    width: 70px;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+#card_img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.contact_card {
+    float: right;
+    width: 62px;
+    height: 182px;
+    background: #fe3730 url("img/상담신청버튼.png") no-repeat center center;
+    background-size: contain;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    right: -1px;
+    z-index: 9999;
+    cursor: pointer;
+    
+}
+
+/*  hover 효과 */
+/* .contact_card:hover + .card{
+
+} */
+
+/* 
+.cardActive {
+   
+    animation-duration: 5s;
+}
+/* 
+.cardDeactive {
+    transform: translateX(-100px);
+} */
+ 
+
+@keyframes taDa{
+    0%{      
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

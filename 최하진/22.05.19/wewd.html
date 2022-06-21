@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사이트 레이아웃-inline-block으로 했을때</title>
+    <!-- containor 안의 콘텐츠가 들어갈 자식 요소들의 크기 조절을 
+        1. 합이 100%로
+        2. 사이드를 고정px크기로 주면 본문을 100% -(사이드 고정 가로길이*2)이렇게 주면
+            사이드바는 크기가 고정인데 본문은 화면에 따라 크기가 커짐
+        -->
+    <!-- inline-block도 display : flex로 줘도 되긴함 -->
+</head>
+<style>
+    html,
+    body {
+        margin: 0px;
+        padding: 0px;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    div {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    /* .containor{
+        width: 100vw;
+        height: 100vh;
+        background: pink;
+    } */
+    #top {
+        background: red;
+        height: 20vh;
+
+    }
+
+    #left-side {
+        background: teal;
+        width: 180px;
+        display: inline-block;
+        float: left;
+        height: 100%;
+    }
+
+    #right-side {
+        background: teal;
+        width: 180px;
+        height: 100%;
+        display: inline-block;
+        float: left;
+    }
+
+    #middle {
+        background: brown;
+
+        /* css함수 화면 100% 비율로 보여줄건데 고정시킬 다른 요소의 절대값만큼 빼줌*/
+
+        width: calc(100% - 360px);
+        height: 100%;
+        display: inline-block;
+        float: left;
+    }
+
+    #foot {
+        background: blue;
+        clear: both;
+        height: 10vh;
+    }
+
+    #containor {
+        width: 100%;
+
+        /*  */
+        height: max-content;
+    }
+</style>
+
+<body>
+    <div class="containor">
+        <div id="top">사이트 제목 들어갈자리</div>
+        <div id="containor">
+            <div id="left-side"></div>
+            <div id="middle">fdfgdsgfdgfd
+                dfgsdgdsgsdz <br>
+                dfgsdgdsgsdz <br>
+                dfgsdgdsgsdz <br>
+                dfgsdgdsgsdz <br>
+
+            </div>
+            <div id="right-side"></div>
+        </div>
+        <div id="foot"></div>
+    </div>
+
+
+</body>
+
+</html>

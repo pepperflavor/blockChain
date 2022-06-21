@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포스터만들기2트</title>
+    <style>
+        body {
+            padding: 0px;
+        }
+        #box1 {
+            background: blueviolet;
+            width: 50%;
+            height: 50%;
+        }
+        #box2 {
+            background: green;
+            width: 50%;
+            height: 50%;
+            
+        }
+        #wrap{
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .left_box {
+            float: left;
+            display: flex;
+        }
+
+        .right_box {
+            float: left;
+            display: flex;
+        }
+
+        .page {
+            width: 1100px;
+            height: 1300px;
+            justify-content: center;
+            align-items: center;
+            position: center;
+        }
+
+        .poster{
+            width: 70%;
+            height: 70%;
+        }
+        .charactor{
+            width: 80px;
+            height: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="left_box" id="box1"> 
+            <img src="images/하울의 움직이는성.jpg" class="poster">
+        </div>
+        <div class="right_box" id="box2">
+            <h1>하울의 움직이는 성</h1>
+            <p>개봉일 : 2004년 12월 24일 (대한민국)</p>
+            <button>night</button>
+
+            <p>감독 : 미야자키 하야오</p>
+
+            <p>출연진: 크리스찬 에빌리 모티머, 진 시몬스, 로런 버콜</p>
+
+            <p>소녀가 마법에 걸린 순간</p>
+            <div class="wrap">
+                <img src="images/소피.jpg" class="charactor">
+                <img src="images/스승.jpg" class="charactor">
+                <img src="images/시종.jpg" class="charactor">
+                <img src="images/캘시퍼.jpg" class="charactor">
+                <img src="images/하울.jpg" class="charactor">
+                <img src="images/할머니1.jpg" class="charactor">
+                <img src="images/허수아비.jpg" class="charactor">
+                <img src="images/힝댕댕.jpg" class="charactor">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

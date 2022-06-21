@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="container"></div>
+        <input id="_input">
+        <button id="createBtn">생성</button>
+        
+    </body>
+    <script>
+        // createElement 태그를 생성해서 변수에 담아줌 createElement(태그의 이름) div면 div태그가 만들어진다. 페이지에
+        // 뿌려진게 아니라 변수에만 담겨있는 상태 let el = document.createElement("div");  화면에 뿌려주기 방법1
+        // el.innerHTML = "안녕하세요"; el.className += "test";  container.innerHTML 문자열로  직접
+        // 태그 추가 let _class = "add"; let add = "안녕하세요"; container.innerHTML += `<div
+        // ${_class}>${add}</div>`;  containor안의 값이 이걸로 덮어씌워진 것 +=로 대입이아니라 추가도 가능
+        // container.innerHTML = "<div class='aaa'>안녕하세요</div>"; appendChild 오브젝트 타입의
+        // 태그를 자식 요소로 추가할 수 있다. container에 자식요소로 추가했음 , 맨밑의 자식요소로 추가된다.
+        // container.appendChild(el);
+        // removeBtn.onclick = function () {
+        //     // removeChild는 자식요소 삭제 container의 자식요소 삭제 removeChild에 el요소를 매개 변수로 전달해 놓으면 el의
+        //     // 요소가 삭제된다.
+        //     container.removeChild(el);
+        // };
+
+        createBtn.onclick = function () {
+            // _input.value 는 입력값
+            let text = _input.value; // 인풋에 입력한 값을 text에 넣고
+            let el = document.createElement("div");
+            el.innerHTML = "안녕하세요";
+            el.className += "test";
+            let removeBtn = document.createElement("button");
+            removeBtn.innerHTML = "삭제";
+            removeBtn.onclick = function(){
+                container.removeChild(el);
+                container.removeChild(removeBtn);
+            };
+
+            container.appendChild(el);
+            // 버튼에 삭제 함수 넣기
+            container.appendChild(removeBtn);
+        };
+    </script>
+</html>

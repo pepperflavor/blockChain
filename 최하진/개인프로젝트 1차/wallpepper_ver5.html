@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 요소들까지 일단 배열에ㅐ 담아서 배경바뀔때마자 텍스트도 바뀜 -->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>페이지 따라하기</title>
+        <link
+            rel="stylesheet"
+            href="malihu-custom-scrollbar-plugin-master/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.concat.min.js">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+        <link rel="stylesheet" href="wallpepper.css">
+        <style></style>
+    </head>
+
+    <body>
+        <!-- 맨위 메뉴 바 -->
+        <div class="water_efect">
+            <header class="bbar">
+                <div class="top_bar">
+                    <div class="logo">
+                        <a href="#"><img id="myname" src="img/아이하진 고화질.png"></a>
+                    </div>
+                    <div>
+                        <nav class="nav_bar">
+                            <ul id="bar_text">
+                                <li class="menu_txt">
+                                    <a class="menu_txt22" href="#">CONSUlTING</a>
+                                </li>
+                                <li class="menu_txt">
+                                    <a class="menu_txt22" href="#">CLASS COURSE</a>
+                                </li>
+                                <li class="menu_txt">
+                                    <a class="menu_txt22" href="#">VIP</a>
+                                </li>
+                                <li class="menu_txt">
+                                    <a class="menu_txt22" href="#">
+                                        About Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <!-- 메뉴바 끝 -->
+            <!-- 여기부터 몸통 -->
+            <section>
+                <div class="scroll_box" style="display: flex;">
+                    <div class="scroll">
+                        <div class="mouse_on"></div>
+                        <div class="mouse_off"></div>
+                    </div>
+                    <p class="p">Scroll</p>
+                </div>
+                <!-- 배경사진 설정 -->
+                <div class="main fullpage-wrapper" id="myContainer">
+                    <div id="textcontet">
+                        <div class="inner_box02">
+                            <div class="slide_con">
+                                <div class="main_text">
+                                    <h3>
+                                    <span class="hi">
+                                        PASSION, TRUST</span>
+                                    <br>
+                                        THERE IS
+                                    <br>
+                                    ALL IN
+                                    <br>
+                                    IHAJIN
+                                </h3>
+                            </div>
+                            <br>
+                                    <p class="main_subText">
+                                        누구도 따라잡을 수 없는 자신감, 아이하진
+                                    </p>
+                                
+                                
+                                <!-- class="inbox_midTxt" -->
+                                <div class="btn_portfolio">
+                                    <a onclick="" id="contact_us">
+                                        <p class="consult">
+                                            상담신청
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="info_card">
+                                    <div class="btn_close">
+                                        <img src="img/closeBtn.png" alt="close">
+                                    </div>
+                                    <div class="logo">
+                                        <a href="|"></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- 상담카드 위치랑 조절해줘야함 -->
+        <div class="contact_card">
+            <a onclick="" id="contactBtn">
+                <p>빠른상담</p>
+            </a>
+        </div>
+
+    </body>
+
+</html>
+<script>
+    // 배경이미지 순서대로 순환시키기 이미지링크를 담은 배열만든다음 배경으로 쓸거니까 body 태그를 querySelector로 받아와서
+    // style.backgroundImage 이걸로 배경이미지 스타일을 지정해준다. body 배경이미지 순환     function for
+    // (let i = 0; i < wrappepper.length; i++) {     let _body =
+    // document.querySelector('body');     _body.style.backgroundImage = `url(` +
+    // wrappepper[i] + `)`; }
+    let tagTable = [`<div class="inner_box02">
+            <div class="slide_con">
+                <div class="main_text">
+                <h3>
+                    <span class="hi">
+                        PASSION, TRUST</span>
+                    <br>
+                    THERE IS
+                    <br>
+                     ALL IN  
+                    <br>
+                    IHAJIN
+                </h3>
+            </div>
+            <br>
+                <p class="main_subText">
+                    누구도 따라잡을 수 없는 자신감, 아이하진
+                </p>   
+                <div class="btn_portfolio">
+                    <a onclick="" id="contact_us">
+                        <p class="consult">
+                            상담신청
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>`, ` <div class="slide bg pic03">
+            <div class="inner_box03">
+                <div class="slide_con">
+                    <div class="main_text">
+                    <h3>
+                        WE
+                        <br>
+                        <span class="hi">CREATE</span>
+                        <br>
+                        INNOVATION
+                        <br>
+                        <span class="hello">JOIN</span> US
+                    </div>
+                    <br>
+                    <p class="main_subText">
+                        아이하진, 혁신을 창조하다.
+                    </p>
+                    
+                    <div class="btn_portfolio">
+                        <a onclick="" id="contact_us">
+                            <p class="consult">
+                                상담신청
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>`, `<div class="slide bg pic04">
+            <div class="inner_box04">
+                <div class="slide_con">
+                    <div class="main_text">
+                    <h3>
+                        LEGAL
+                        <br>
+                        <span class="hi">" TIER "</span>
+                        <br>
+                        UPGRADE
+                        <br>
+                        <span class="hello">BELIVE</span> US
+                    </div>
+                    <br>
+                    <p class="main_subText">
+                        더이상 불법업체에 맡기지 마세요
+                    </p>
+                    
+                    <div class="btn_portfolio">
+                        <a onclick="" id="contact_us">
+                            <p class="consult">
+                                상담신청
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>`, `<div class="slide bg pic01">
+                    <div class="inner_box01">
+                        <div class="slide_con">
+                        <div class="main_text">
+                            <h3>
+                                WE CAN PROVIDE
+                                <br>
+                                BETTER <span class="hello">SERVICE</span>
+                                <br>
+                                MORE TAHN
+                                YOUR<span class="hi"> EXPECT</span>
+                            </h3>
+                        </div>
+                        <br>
+                            <p class="main_subText">
+                                아이하진과 함께 당신의 가치를 개발해보세요
+                            </p>
+                            <div class="btn_portfolio">
+                                <a onclick="" id="contact_us">
+                                    <p class="consult">
+                                        상담신청
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>`, `<div class="slide bg pic02"></div>`]
+    console.log(tagTable);
+    let wrappepper = ["img/밤바다.jpg", "img/달밤.jpg", "img/범고래밤바다.jpg", "img/배경3.jpg"];
+
+    let wrappepper_contents = [
+        [
+            "제목1",
+            "내용1",
+            "내용1",
+            "내용1",
+            "내용1",
+            "내용1",
+            "내용1",
+            "내용1",
+            "내용1"
+        ],
+        [
+            "제목2", "내용2", "내용2", "내용2"
+        ],
+        [
+            "제목3", "내용3", "내용3", "내용3"
+        ],
+        [
+            "제목4", "내용4", "내용4", "내용4"
+        ]
+    ]
+
+    let imgs = document.querySelectorAll('img');
+    let arrCount = 1;
+
+    // let wrappepper = ["img/물고기 배경.jpg", "img/연어점프.jpg", "img/상어.jpg"]; let imgs =
+    // document.querySelectorAll('img'); let arrCount = 0; 첫화면에 그냥 고정으로 0번째 인덱스의 그림
+    // 띄워줌
+    window.onload = function () {
+        let _body = document.querySelector('body');
+        _body.style.backgroundImage = `url(` + wrappepper[0] + `)`;
+    }
+    // 그다음그림부터 출력되는 함수
+    function backImgroll() {
+        let _body = document.querySelector('body');
+        
+        _body.style.backgroundImage = `url(` + wrappepper[arrCount] + `)`;
+        textcontet.innerHTML = tagTable[arrCount];
+        // console.log("arrCount" + arrCount); console.log(_body.style.backgroundImage);
+        arrCount++;
+        if (arrCount > 3) {
+            arrCount = 0;
+        }
+    }
+    setInterval(() => {
+        backImgroll()
+    }, 3000);
+
+    //slide con으로 inner_box 받기
+    let inner_text = document.querySelectorAll(".slide_con");
+
+    // let tags = tagTable.map((element)=>{     return
+    // document.querySelector(element) }) tags.map((element, idx)=>{
+    // console.log(element.innerHTML);     console.log(wrappepper_contents[1][idx]);
+    // element.innerHTML = wrappepper_contents[1][idx] }) console.log(tags)
+
+    $(".water_efect").ripples({perturbance: 0.04, dropRadius: 20});
+    // $(".water").ripples({     resolution: 200,     perturbance: .004, }); /스크롤바
+    // 커스텀 $(".scroll").mCustomScrollbar({theme:"dark"})
+
+    window.onclick = function (event) {
+        // event.target 은 이벤트가 발생한 요소 event 태그의 이벤트가 담겨있다.
+        console.log(event.target); // 이벤트가 발생한 요소를 알려준다.
+    }
+</script>

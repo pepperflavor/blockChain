@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>펜션예약</h1>
+    <form action="">
+        <fieldset>
+            <legend>예약정보</legend>
+            <ul>
+                <li>
+                    <label for="user_name">이름</label>
+                    <!-- 자동커서 -->
+                    <input type="text" id="user_name" autofocus />
+                </li>
+                <li>
+                    <label for="phone">전화번호</label>
+                    <!-- 힌트표시 -->
+                    <input type="tel" id="phone" placeholder="하이픈 - 제외하고 입력" />
+                    <!-- 
+                        readonly : 읽기 전용 필드로 바꿔줌 텍스트등 영역에 쓰여있는 글자를
+                        볼수는 있지만 사용자가 입력은 불가능
+                        required : 필수 필드에 값이 제대로 입력이 되었는지 검증
+                        반드시 입력해야 하는 입력영역에 사용, 오류메세지는 따로 지정 불가능
+                     -->
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+}
+#content{
+    background: url("/images/.bg.jpg") no-repeat;
+    background-size: {
+
+    };
+}
+/* h1{
+    font-size: 30px;
+} */

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1>주문하기</h1>
+    <form action="">
+        <fieldset>
+            <legend>상품선택</legend>
+            <p><b>주문할 상품을 선택하세요</b></p>
+            <!-- value : 서버에게 넘겨줄 값 s3=사과박스 라고 알려주는 것 
+                 영문혹은 숫자로 지정해야함
+                필수 값-->
+            <label><input type="checkbox" value="s3"/>사과박스</label>
+            <label><input type="checkbox" value="s1"/>신발</label>
+            <label><input type="checkbox" value="f3"/>자동차</label>
+            <label><input type="checkbox" value="f2"/>핸드폰</label>
+            <p><b>포장이 필요하다면 옵션을 선택하세요</b></p>
+            <!-- radio로 단일 값만 선택되게 하려면 name을 같게 지정해 줘야한다
+            보기중에 하나만 선택하도록 하는 것이기 때문에
+            쉽게 말해서 radio로 한문제로 묶어주고 name으로 한문제의 객관식 보기를 지정해주는 것 -->
+            <label><input type="radio" name="togo" value="Y">포장 OK</label>
+            <label><input type="radio" name="togo" value="N">포장 NO</label>
+        </fieldset>
+    </form>
+</body>
+</html>

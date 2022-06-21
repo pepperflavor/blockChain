@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="회원가입.css" />
+    <link rel="stylesheet" href="reset.css" />
+
+    <title>상담신청</title>
+  </head>
+  <body>
+    <div class="boxBorder">
+      <div class="top">
+        <div>
+          <a href="wallpepper7.html">
+            <img
+              class="logo"
+              src="img/아이하진_고화질-removebg-preview.png"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="exite">
+          <a href="wallpepper7.html"
+            ><img
+              class="exite"
+              src="img/close.png"
+              onclick="location.href=wallpepper7.html"
+              alt=""
+          /></a>
+        </div>
+      </div>
+      <div class="section2">
+        <form name="my_form" style="margin: 0">
+          <div class="consult_info">
+            <h1 class="mainTxt">회원가입</h1>
+            <div class="contact_us">
+              <div></div>
+            </div>
+            <div class="consult_box">
+              <div class="tittle">
+
+                <p>
+                  &nbsp; 양식에 맞게 작성해주십시오
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="input_Box">
+            <p class="innerP">이&nbsp;&nbsp;름</p>
+            <input class="box" type="text" name="g_name" placeholder="한글만 입력하십시오(2 ~ 5자리)"  onblur="this.placeholder='한글만 입력하십시오(2 ~ 5자리)'" onfocus="this.placeholder=''" />
+            <p class="innerP">아이디</p>
+            <input class="box" type="text" name="g_Id" placeholder="숫자 + 영어만 입력하십시오" onblur="this.placeholder=`숫자 + 영어만 입력하십시오`" onfocus="this.placeholder=''"/>
+
+            <p class="innerP">연락처</p>
+            <input class="box" type="text" name="tel"  placeholder=" ' - ' 을 포함한 숫자만 입력하십시오" onblur="this.placeholder='' - ' 을 포함한 숫자만 입력하십시오'" onfocus="this.placeholder=''"/>
+
+            <p class="innerP">이메일</p>
+            <input class="box" type="text" name="e_mail"  placeholder=" 'abc@abc.com' 형태로 입력하십시오" onblur="this.placeholder= '`abc@abc.com` 형태로 입력하십시오'"  onfocus="this.placeholder=''"/>
+
+            <p class="innerP">비밀번호</p>
+            <input class="box" type="password" name="class" placeholder=" 특수문자, 알파벳대소문자 포함 8자리 이상 입력하세요"  onblur="this.placeholder='특수문자, 알파벳대소문자 포함 8자리 이상 입력하세요'" onfocus="this.placeholder=''"/>
+            <p class="innerP">비밀번호 확인</p>
+            <input class="box" type="password" name="class" placeholder=" 비밀번호를 다시 한번 입력하세요" onblur="this.placeholder='비밀번호를 다시 한번 입력하세요'" onfocus="this.placeholder=''" />
+            <div class="subBox">
+              <input class="checkBox" type="checkbox" class="innerP" autocomplete="off" />
+              <label for="checkBox" class="checkBoxTxt">&nbsp;&nbsp;개인정보 취급방침에 동의합니다.</label>
+            </div>
+          </div>
+        </form>
+        <button
+        type="button"
+          class="checkBtn"
+          onclick="check()">제출하기</button>
+      </div>
+    </div>
+    <!-- 입력양식 끝 -->
+  </body>
+  <!-- <script src="회원가입.js"></script> -->
+<script src="회원가입.js"></script>
+</html>

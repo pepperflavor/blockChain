@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- float 속성을 사용해서 웹의 요소를 왼쪽이나 오른쪽에 배치하면
+    그 다음에 넣는 다른 요소에도 똑같은 속성이 전달된다. 따라서 float 속성이
+    더 이상 유용하지 않다 라고 알려주는 속성이 필요하다. => clear로 해제
+    
+    ==================================
+    속성
+    left : float:left를 해제
+    right : float:right를 해제
+    both : 둘다해제
+    ===================================
+-->
+<style>
+    /* 
+    05.html과 비교했을때 가로로 배치하는건 유사해보이지만 
+    float는 기본마진과 패딩이 없다 
+    */
+    div {
+     padding: 20px;
+        margin: 10px;
+    }
+
+    #box1 {
+        background: blue;
+        float: left;
+    }
+
+    #box2 {
+        background: red;
+        float: left;
+    }
+
+    #box3 {
+        background: green;
+        margin: 20px;
+    }
+
+    #box4 {
+        background: yellow;
+       clear: left;
+    }
+</style>
+
+<body>
+    <div id="box1">박스1</div>
+    <div id="box2">박스2</div>
+    <div id="box3">박스3</div>
+    <div id="box4">박스4</div>
+
+</body>
+
+</html>

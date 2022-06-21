@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>페이지 따라하기</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            .logo {
+
+                margin-top: 50px;
+                margin-left: 30px;
+                position: fixed;
+            }
+            .top_bar {
+                overflow: visible;
+                /* display: flex; */
+            }
+            .nav_bar {
+                width: 100%;
+                display: flex;
+                margin-left: 20%;
+                margin-right: 10%;
+                position: absolute;
+                /* overflow-wrap: break-word; */
+            }
+
+            .menu_txt {
+                list-style: none;
+                margin: 5vw 5vw 5vw 2vw;
+                text-align: center;
+                font-size: 2em;
+                font-weight: bolder;
+                color: rgb(236, 225, 204);
+                /* letter-spacing: 10px; */
+            }
+            .menu_txt22 {
+                text-decoration: none;
+                color: rgb(236, 225, 204);
+            }
+            .bbar {
+                height: 270px;
+                width: 100%;
+                /* background-color: rgba(204, 198, 198, 30%);  */
+                z-index: -1;
+                position: relative;
+            }
+            #bar_text {
+                display: flex;
+                /* flex-direction: flex-end; */
+                position: absolute;
+                top: 50%;
+                flex-wrap: wrap;
+                width: 80%;
+                justify-content: space-between;
+                align-content: center;
+                justify-content: flex-end;
+
+            }
+            #myname {
+                height: 170px;
+                width: 330px;
+                border-radius: 10%;
+                position: fixed;
+            }
+            #myContainer {
+                height: 100%;
+                position: relative;
+                touch-action: none;
+                transform: translate3d(0px, 0px, 0px);
+                transition: all 1000ms ease 0s;
+            }
+            body {
+                overflow: hidden;
+                width: 100vw;
+                height: 100vh;
+                /* background-image: url("img/연어점프.jpg"); */
+                background-size: cover;
+                transition: 2s;
+            }
+            /* body:before {
+                content: '';
+                display: inline-block;
+                vertical-align: middle;
+                height: 100%;
+            } */
+  
+        </style>
+    </head>
+
+
+    <body class="slide">
+        <!-- 맨위 메뉴 바 -->
+        <header class="bbar">
+            <div class="top_bar">
+                <div class="logo">
+                    <a href="#"><img id="myname" src="img/아이하진 고화질.png"></a>
+                </div>
+                <div>
+                    <nav class="nav_bar">
+                        <ul id="bar_text">
+                            <li class="menu_txt">
+                                <a class="menu_txt22" href="#">CONSUlTING</a>
+                            </li>
+                            <li class="menu_txt">
+                                <a class="menu_txt22" href="#">CLASS COURSE</a>
+                            </li>
+                            <li class="menu_txt">
+                                <a class="menu_txt22" href="#">VIP</a>
+                            </li>
+                            <li class="menu_txt">
+                                <a class="menu_txt22" href="#">
+                                    About Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- 메뉴바 끝 -->
+        <!-- 여기부터 몸통 -->
+        <section class="water">
+            <div class="scroll_box" style="display: flex;">
+                <div class="scroll">
+                    <div class="mouse_on"></div>
+                    <div class="mouse_off"></div>
+                </div>
+                <p class="p">Scroll</p>
+            </div>
+            <!-- 배경사진 설정 -->
+            <div class="main fullpage-wrapper" id="myContainer">
+             
+            </div>
+        </section>
+
+    </body>
+</html>
+<script>
+    // 배경이미지 순서대로 순환시키기 이미지링크를 담은 배열만든다음 배경으로 쓸거니까 body 태그를 querySelector로 받아와서
+    // style.backgroundImage 이걸로 배경이미지 스타일을 지정해준다. body 배경이미지 순환     function for
+    // (let i = 0; i < wrappapper.length; i++) {     let _body =
+    // document.querySelector('body');     _body.style.backgroundImage = `url(` +
+    // wrappepper[i] + `)`; }
+
+    let wrappepper = [ "img/밤바다.jpg","img/달밤.jpg","img/범고래밤바다.jpg", "img/배경3.jpg"];
+    let imgs = document.querySelectorAll('img');
+    let arrCount = 1;
+
+    // let wrappepper = ["img/물고기 배경.jpg", "img/연어점프.jpg", "img/상어.jpg"]; let imgs =
+    // document.querySelectorAll('img'); let arrCount = 0;
+
+    window.onload = function(){
+        let _body = document.querySelector('body');
+        _body.style.backgroundImage = `url(` + wrappepper[0] + `)`;
+    }
+    function backImgroll() {
+        let _body = document.querySelector('body');
+        _body.style.backgroundImage = `url(` + wrappepper[arrCount] + `)`;
+
+        console.log("arrCount" + arrCount);
+        console.log(_body.style.backgroundImage);
+        arrCount++;
+        if (arrCount > 3) {
+            arrCount = 0;
+        }
+    }
+    setInterval(() => {
+        backImgroll()
+    }, 3000);
+
+    // //// 물방울 이펙트 시작
+    // $('body').ripples({resolution: 512, dropRadius: 20, perturbance: 0.04});
+    $(".slide").ripples({
+        resolution: 512,
+        perturbance: 0.4,
+        dropRadius :20,
+    });
+    // $(".water").ripples({
+    //     resolution: 200,
+    //     perturbance: .004,
+    // });
+
+
+/// 어디서 물방울 효과주는데가 한정적인지 찾기
+// if (event.target.classList.contains("_target")) {
+//     console.log("있어");
+//   }
+//   event.target;
+
+//   let _class = event.target.className;
+//   switch (_class) {
+//     case "_target":
+//       console.log(target);
+//       break;
+
+//     default:
+//       break;
+//   }
+// };
+window.onclick = function (event) {
+  // event.target 은 이벤트가 발생한 요소
+  // event 태그의 이벤트가 담겨있다.
+  console.log(event.target); // 이벤트가 발생한 요소를 알려준다.
+}
+</script>

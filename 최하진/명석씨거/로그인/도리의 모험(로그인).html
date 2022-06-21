@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="도리의 모험(로그인).css" />
+  </head>
+  <body>
+    <!-- <audio src="resources/도리의 모험.mp3" autoplay></audio> -->
+    <header>
+      <div id="title">
+        <a href="/도리의 모험/로그인/도리의 모험(로그인).html">도리의 모험</a>
+      </div>
+      <div id="top_bar">
+        <a href="#"><div class="topLeft">BrosSoft</div></a>
+        <div class="topRight">마이페이지</div>
+      </div>
+      <div class="navCon">
+        <nav class="navi">
+          <ul class="naviBar">
+            <li id="gameIntdbar">게임소개</li>
+            <li id="gameInfmbar">게임정보</li>
+            <li id="gameCommubar">커뮤니티</li>
+            <li id="gameSuppobar">고객센터</li>
+          </ul>
+
+          <div class="gameMenu">
+            <div id="gameIntd" data-num="0" class="miniBar">
+              <ul class="naviMenu">
+                <li>게임배경</li>
+                <li>게임방법</li>
+                <li>초보자 가이드</li>
+                <li>시스템</li>
+              </ul>
+            </div>
+            <div id="gameInfm" data-num="1" class="miniBar">
+              <ul class="naviMenu">
+                <li>캐릭터</li>
+                <li>몬스터</li>
+                <li>보스</li>
+                <li>아이템</li>
+              </ul>
+            </div>
+            <div id="gameCommu" data-num="2" class="miniBar">
+              <ul class="naviMenu">
+                <li>자유게시판</li>
+                <li>공략게시판</li>
+                <li>건의사항</li>
+                <li>스크린샷</li>
+              </ul>
+            </div>
+            <div id="gameSuppo" data-num="3" class="miniBar">
+              <ul class="naviMenu">
+                <li>도움말</li>
+                <li>1:1문의</li>
+                <li>버그신고</li>
+                <li>후원하기</li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section>
+      <div id="container">
+        <div id="bgSlider">
+          <ul class="bgSlider">
+            <li><img src="images/시작배경1.png" /></li>
+            <li><img src="images/시작배경2.png" width="1920px" /></li>
+            <li><img src="images/시작배경3.png" /></li>
+          </ul>
+        </div>
+        <div class="loginContainer">
+          <div id="left_bar"></div>
+          <div id="login">
+            <div id="game_start">
+              <!-- <rect id = "shape"  -->
+              <img src="images/게임스타트.png" width="90%" />
+            </div>
+            <div id="login_border">
+              <div id="login_id">
+                아이디&nbsp;<input type="text" name="id" id="id_text" />
+              </div>
+              <div id="login_pw">
+                패스워드&nbsp;<input type="password" name="pw" id="pw_num" />
+              </div>
+              <button class="loginBtn">로그인</button>
+              <div class="join">
+                <div onclick="location.href='#'">회원가입</div>
+                <div onclick="location.href='#'">아이디 찾기</div>
+                <div onclick="location.href='#'">비밀번호 찾기</div>
+              </div>
+            </div>
+            <div class="sns">
+              SNS 로그인 &nbsp;&nbsp;|
+              <div class="sns_img">
+                <a href="#"
+                  ><img src="images/네이버.png" width="25px" height="25px"
+                /></a>
+              </div>
+              <div class="sns_img">
+                <a href="#"
+                  ><img src="images/페이스북.png" width="25px" height="25px"
+                /></a>
+              </div>
+              <div class="sns_img">
+                <a href="#"
+                  ><img src="images/카카오.png" width="25px" height="25px"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="inform">
+            <form action="#">
+              <fieldset>
+                <legend>이벤트</legend>
+                <ul id="event">
+                  <li><img src="images/event1.png" class="event" /></li>
+                  <li><img src="images/event2.png" class="event" /></li>
+                  <li><img src="images/event3.png" class="event" /></li>
+                </ul>
+              </fieldset>
+            </form>
+          </div>
+          <div id="right_bar"></div>
+          <div class="characterA"><img src="images/character.gif" /></div>
+          <div class="characterB">
+            <img src="images/character1.gif" width="100px" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="logo"><img src="images/로고.png" height="120px" /></div>
+      <div class="company">
+        <dl>
+          <dd>회사 전화번호 : 031-459-3433</dd>
+          <dd>대표 전화번호 : 010-2963-3433</dd>
+          <dd>회사 위치 : 경기도 부천시 양지로 205 서영아너시티2</dd>
+        </dl>
+      </div>
+      <div class="copyright">
+        copyrightⓒ 2022 All rights reserved by BrosSoft
+      </div>
+    </footer>
+  </body>
+  <script src="도리의 모험(로그인).js"></script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>게임시작버튼</title>
+        <style>
+            .background{
+                width: 50vw;
+                height: 50vh;
+                justify-content: center;
+                border: 0;
+            }
+            .startBtn{
+                width: 300px;
+                height: 100px;
+                position: relative;
+                background-color: crimson;
+                border: none;
+                border-radius:20%
+            }
+            body{
+                background-color: bisque;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="text-align:center ;"><img class="background" src="IMG/게임시작배경.jpg">
+        <br>
+        
+        <button class="startBtn" onclick="newPage()"> <span style="font-size: 1.5em" >가위바위보 게임 시작!</span></button>
+        </div>
+        <script>
+            function newPage() {
+                window.location.href = "가위바위보버튼.html";
+            }
+        </script>
+
+    </body>
+</html>

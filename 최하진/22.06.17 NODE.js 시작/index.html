@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+  <script>
+    let box = document.querySelector(".box");
+    let str = "나는 아아아아abc abc, abcabc , 나는 문자열";
+    let str2 = str.match(/aBc/i);
+    box.innerHTML = str2;
+    console.log(str2); //  groups : 원하는 문자열이 복수개인지,
+    //index 는 처음으로 일치하는 문자열의 시작 인덱스 시점인 듯?
+    console.log("배열" + str2[0]); //원하는 문자열을 찾아서 배열형태로 잡아줌
+    console.log(typeof str2);
+  </script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- <script src="JS/main.js"></script> -->
+        <script src="JS/main_02.js"></script>
+
+        <h1>경일</h1>
+        <button id="btn">hihi</button>
+
+        <script>
+            const btn = window
+                .document
+                .getElementById("btn");
+
+            var Student = {
+                name: "homg",
+                st: function () {
+                    //함수가 호출될때 this가 결정된다.
+                    console.log(this);
+                },
+            };
+
+            btn.addEventListener("click", stdent.st)
+            //Student.st();
+        </script>
+    </body>
+</html>

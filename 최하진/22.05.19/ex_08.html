@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사이트 레이아웃</title>
+</head>
+<style>
+    html, body{
+        margin: 0px;
+        padding: 0px;
+        width: 100vw;
+        height: 100vh;
+    }
+     div {
+     padding: 0px;
+     margin: 0px;
+    }
+    /* .containor{
+        width: 100vw;
+        height: 100vh;
+        background: pink;
+    } */
+    #top{
+        background: red;
+        height: 20vh;
+        
+    }
+    #left-side{
+        background: teal;
+        width: 180px;
+    }
+    #right-side{
+        background: teal;
+        width: 180px;
+    }
+    #middle{
+        background: brown;
+        width: 100%;
+    }
+    #foot{
+        background: blue;
+        clear: both;
+        height: 10vh;
+    }
+    #containor{
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+    /* 
+    1. 본문부분이 될 middle과 사이드 바를 div로 한번 더 묶어준다. 
+    2. 그리고 display : flex로 자식요소를 가로로 정렬해준다.
+    3. containor 부분의 가로와 높이를 100%로 준다음 사이드는 크기가 변하는걸 원하지 않기때문에
+    고정 px값으로 준다. 
+    
+
+    width 를 숫자로 정의하는 경우 부모요소를 기준으로 한다. 
+    그러나 max-content /min-content 는 자식요소의 컨텐츠에 따라 결정된다.
+
+    max-content : 정확한 content-size를 얻을 수 있다.
+    
+     */
+</style>
+<body>
+    <div class="containor">    
+    <div id="top">사이트 제목 들어갈자리</div>
+    <div id="containor">
+    <div id="left-side"></div>
+    <div id="middle">fdfgdsgfdgfd
+        본문에 내용을 채우자!<br>
+
+    </div>
+    <div id="right-side"></div>
+</div>
+    <div id="foot"></div>
+</div>
+
+    
+</body>
+</html>

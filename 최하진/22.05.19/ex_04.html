@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-border</title>
+    <style>
+        /* 
+        마진 중첩현상 :
+            여러 요소를 세로로 쭉 배치할 때 margine을 주면 위아래의 요소의 margine이 만날경우
+            중첩이 될 수 있다. 너무 커지는걸 방지하기 위해서. 이걸 고려해서 컨텐츠를 배치해야한다.
+            마진영역이 겹칠경우 큰 마진값이 작은 마진값을 잡아먹는다 */
+        *{
+            box-sizing: border-box; 
+            /* 테두리를 기준으로 크기를 정한다*/
+        }
+        div{
+            width: 200px;
+            height: 100px;
+            margin: 30px;
+        }
+        #box1{
+            background: rgb(255, 0, 255);
+            margin-bottom: 50px;
+        }
+        #box2{
+            background: rgb(8, 160, 89);
+        }
+        #box3{
+            background: rgb(238, 215, 5);
+        }
+    </style>
+</head>
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+
+    
+</body>
+</html>

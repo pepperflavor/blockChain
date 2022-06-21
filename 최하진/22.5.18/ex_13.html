@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        웹 문서에 띄우는 텍스트의 글꼴을 지정. 
+        시스템에 글꼴이 설치가 안되어있는 경우를 대비해 두번째 세번째 글꼴도 적어줄 수 있다.
+     -->
+     <style>
+     
+         body{
+             /* font-size: 20px; */
+             background: url('images/콩순이\ 배너.jpg') no-repeat fixed;
+             background-size: cover;
+             text-align: center;
+         }
+         h1{
+             font-size: 3em;
+             color: rgb(214, 16, 16);
+             /* a : 투명도 */
+             /* color: rgba(red, green, blue, alpha); */
+             color: rgba(255, 5, 5, 0.1);
+         }
+         .accent {
+             font-weight: 100;
+         }
+         .italic{
+            font-style: italic;
+         }
+         .color1{
+             color: white;
+         }
+         .color2{
+             color: rgba(255, 255, 255, 0.5);
+         }
+         /* 
+         px, pt => 절대크기
+         
+         em, rem => 상대크기 단위 (1em = 16px) */
+     </style>
+</head>
+<body>
+    <h1 class="color1">한라봉</h1>
+    <h1 class="color2">제주도</h1>
+    <p>일본에서 한라봉과 교배해 만든 <span class="accent">신품종</span> 감귤.
+        당도가 높고 과즙이 풍부하며 껍질이 얇고 붉은빛을 띤다.</p>
+    <p>일본에서 한라봉과 교배해 만든 신품종 감귤.
+        당도가 높고 과즙이 풍부하며 껍질이 얇고 붉은빛을 띤다.</p>
+    <p class="italic">
+        일본에서 한라봉과 교배해 만든 신품종 감귤.
+        당도가 높고 과즙이 풍부하며 껍질이 얇고 붉은빛을 띤다.</p>
+
+ 
+</body>
+</html>
