@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ShowList{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="_inputList" style="text-align: center;">
+        <h1>할 일 저장하기</h1><br>
+        <form class="todoList" action="index.html" method="post">
+            <p> 날짜 &nbsp; <input type="datetime-local" name="listArr[]"></p>
+            <p> 할일 &nbsp; <input type="text" name="listArr[]"></p>
+            <p> 실행할 시간 &nbsp; <input type="text" name="listArr[]"></p>
+            <button type="button" id="saveBtn" > 저장하기 </button>
+        </form>
+        <button id="spreadList" onclick="turnShow()">할 일 보기</button>
+
+        <!-- <p>
+            날짜
+        </p>
+        <input type="datetime-local">
+        <p>
+            시간
+        </p>
+        <input type="text" name="list_time">
+        <p>할 일</p>
+        <input type="text" name="list_todo">
+        <button id="saveBtn">저장</button> -->
+    </div>
+    <div id="ShowList">
+
+    </div>
+</body>
+<script>
+    let listCount=0;
+    //각각 배열로 넣어줌
+    
+    var timeArr = new Array(); // 실행예정날짜 담을 배열 
+    var todoArr = new Array(); // 할 일 담을 배열
+    var DateArr = new Array(); // 입력한 날짜 담을 배열
+
+    // function addTime(){
+    //     for(var i=0; i<timeArr.length; i++){
+    //         $('input[]')
+    //     }
+    // }
+    //입력값 배열에 추가하기
+    // 실행예정날짜 배열
+    function PushtimeArr(){
+        var input = document.getElementsByName('listArr[]');
+        timeArr.push(input[0].value);
+
+        // console.log('1');
+        // console.log(timeArr[0]);
+    }
+    //할일 배열
+    function PushtoDoArr(){
+        var input_todo = document.getElementsByName('listArr[]');
+        todoArr.push(input_todo[1].value);
+        // console.log('2');
+        // console.log(todoArr[0]);                                                                                                                                                                                                                                              
+
+    }
+
+    //입력한 날짜
+    function PushdateArr(){
+        var input_date = document.getElementsByName('listArr[]');
+        DateArr.push(input_date[2].value);
+        // console.log('3');
+        // console.log(DateArr[0]);
+
+    }
+
+    // 저장하기 누르면 각 항목이 배열에 저장
+    // 익명함수를 넣을 수 없어서 이렇게 써줘야한다.
+    saveBtn.onmouseup = function(){
+        PushtimeArr();
+        PushtoDoArr();
+        PushdateArr();
+    } ;
+
+    //할일보기 버튼 누르면 리스트 펼치기
+    function turnShow(){
+        document.getElementById("ShowList").style.display = "block";
+        showList();
+    }
+
+    function showList(){
+        if(document.getElementById("ShowList").style.display == "block"){
+            let el = document.createElement("div");
+            //innerhtml 초기화
+            el.innerHTML = "";
+            for(let x=0; x<timeArr.length;x++){
+                listCount = x+1;
+                el.innerHTML +=  listCount + ". 번 List "+ "<br>" + "실행 예정 날짜 " + timeArr[x] + "<br>" + " 할일 "+todoArr[x]+ "<br>" + " 실행 예정시간 " + DateArr[x]+ "<br>";
+                // 삭제버튼
+                let removeBtn = document.createElement("button");
+                removeBtn.innerHTML = "일정 삭제";
+                removeBtn.onclick = function(){
+                    ShowList.removeChild(el);
+                    ShowList.removeChild(removeBtn);
+                };
+            }
+            //console.log(el);
+            //console.log(timeArr);
+        }
+    }
+    
+    // saveBtn.onclick = showList();
+    // 할일등등 3가지를 받아서 input에 담고 index
+
+  
+
+</script>
+</html>

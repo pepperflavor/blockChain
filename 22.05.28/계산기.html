@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick</title>
+</head>
+<body>
+    <h1>계산기</h1>
+    <b>A : </b><input type="number" id = "A"/>
+    <b>B : </b><input type="number" id = "B"/>
+
+    <!-- <input type="button" onclick="function add();" id="sum"> </input> -->
+    <button onclick="getSumInputValue();" value="getSum"><b>더하기 연산</b> </button>
+    <button onclick="getSubInputValue();" value="getSub"><b>빼기 연산</b> </button>
+    
+    <!-- <script src="JS/main.js"></script> -->
+    <script>
+        function getSumInputValue(){
+            let num1 = Number(document.getElementById("A").value);
+            let num2 = Number(document.getElementById("B").value);
+            let sum = num1 + num2;
+            alert("입력한 두 수의 합은 :" + sum).innerHTML = inputValue;
+        }
+
+        function getSubInputValue(){
+            let num3 = Number(document.getElementById("A").value);
+            let num4 = Number(document.getElementById("B").value);
+            let discount = num3 - num4;
+            alert("입력한 두 수의 차는 : " + discount).innerHTML = inputValue;
+        }
+
+    </script>
+</body>
+</html>

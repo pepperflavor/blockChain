@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>할 일 MEMO</title>
+        <style></style>
+    </head>
+    <body>
+        <div class="_inputList" style="text-align: center;">
+            <p>
+                날짜
+            </p>
+            <input class="todoDate" id="list1" type="datetime-local">
+            <p>
+                시간
+            </p>
+            <input class="todoTime" id="list2">
+            <p>할 일</p>
+            <input class="todoList" id="list3">
+            <button id="saveBtn">저장</button>
+        </div>
+    </body>
+    <script>
+
+        saveBtn.onclick = function () {
+            // var meMo = new Array(); for(let i=0; i<meMo.lenght; i++){ } var meMo =
+            // document.getElementById('list').value +
+            // document.getElementById('list2').value
+            // +document.getElementById('list3').value;
+            let text = getElementByClassNane("list1").value + getElementByClassNane("list2").value +getElementByClassNane("list3").value
+            //_inputList.list2.value+ _inputList.list3.value;
+            let el = document.createElement("div");
+            el.innerHTML = document
+                .getElementById('list')
+                .value + document
+                .getElementById('list2')
+                .value + document
+                .getElementById('list3')
+                .value;
+            let removeBtn = document.createElement("button");
+            removeBtn.innerHTML = "일정삭제";
+            removeBtn.onclick = function(){
+                _inputList.removeChild(el);
+                _inputList.removeChild(removeBtn);
+            };
+
+            _inputList.appendChild(el);
+            _inputList.appendChild(removeChild);
+        };
+    </script>
+</html>
